@@ -27,7 +27,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
     "noUnusedLocals": false,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "allowUnreachableCode": false,
     "useUnknownInCatchVariables": true,
