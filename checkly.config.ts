@@ -17,7 +17,7 @@ const emailChannel = new EmailAlertChannel('email-channel-1', {
 export const config = defineConfig({
   projectName: 'pinbar-trader',
   logicalId: 'pinbar-trader',
-  repoUrl: 'https://github.com/CryptoCashControl/pinbar-trader.git',
+  repoUrl: 'git@github.com:C-L-STARK/pinbar-trader.git',
   checks: {
     locations: ['us-east-1', 'eu-west-1'],
     tags: ['website'],
