@@ -70,6 +70,7 @@
   "DashboardLayout": {
     "dashboard_link": "仪表板",
     "user_profile_link": "管理您的账户",
-    "sign_out": "登出"
+    "sign_out": "登出",
+    "price_link": "定价"
   }
 }
