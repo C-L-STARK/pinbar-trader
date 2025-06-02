@@ -17,10 +17,7 @@
     "chai"
   ],
   "typescript.preferences.preferTypeOnlyAutoImports": true, // Prefer type-only imports
-
-  // Vitest
-  "testing.automaticallyOpenTestResults": "neverOpen", // Don't open the test results automatically
-
+  
   // I18n
   "i18n-ally.localesPaths": ["src/locales"],
   "i18n-ally.keystyle": "nested",

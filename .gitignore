@@ -10,10 +10,6 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-/vitest-test-results
-
 # next.js
 /.next/
 /out/
@@ -50,8 +46,3 @@ next-env.d.ts
 
 # Database
 *.db
-
-# playwright
-/test-results/
-/playwright-report/
-/playwright/.cache/
