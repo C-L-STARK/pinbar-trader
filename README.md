@@ -1,0 +1,42 @@
+### THANKS TO THE FOLLOWING PROJECTS:
+
+- ⚡ [Next.js](https://nextjs.org) with App Router support
+- 🔥 Type checking [TypeScript](https://www.typescriptlang.org)
+- 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
+- ✅ Strict Mode for TypeScript and React 19
+- 🔒 Authentication with [Clerk](https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate): Sign up, Sign in, Sign out, Forgot password, Reset password, and more.
+- 👤 Passwordless Authentication with Magic Links, Multi-Factor Auth (MFA), Social Auth (Google, Facebook, Twitter, GitHub, Apple, and more), Passwordless login with Passkeys, User Impersonation
+- 📦 Type-safe ORM with DrizzleORM, compatible with PostgreSQL, SQLite, and MySQL
+- 💽 Offline and local development database with PGlite
+- 🌐 Multi-language (i18n) with [next-intl](https://next-intl-docs.vercel.app/) and [Crowdin](https://l.crowdin.com/next-js)
+- ♻️ Type-safe environment variables with T3 Env
+- ⌨️ Form handling with React Hook Form
+- 🔴 Validation library with Zod
+- 📏 Linter with [ESLint](https://eslint.org) (default Next.js, Next.js Core Web Vitals, Tailwind CSS and Antfu configuration)
+- 💖 Code Formatter with [Prettier](https://prettier.io)
+- 🦊 Husky for Git Hooks
+- 🚫 Lint-staged for running linters on Git staged files
+- 🚓 Lint git commit with Commitlint
+- 📓 Write standard compliant commit messages with Commitizen
+- 🦺 Unit Testing with Vitest and React Testing Library
+- 🧪 Integration and E2E Testing with Playwright
+- 👷 Run tests on pull request with GitHub Actions
+- 🎉 Storybook for UI development
+- 🐰 AI-powered code reviews with [CodeRabbit](https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025)
+- 🚨 Error Monitoring with [Sentry](https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo)
+- ☂️ Code coverage with [Codecov](https://about.codecov.io/codecov-free-trial/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo)
+- 📝 Logging with Pino.js and Log Management with [Better Stack](https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate)
+- 🖥️ Monitoring as Code with [Checkly](https://www.checklyhq.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate)
+- 🔐 Security and bot protection ([Arcjet](https://launch.arcjet.com/Q6eLbRE))
+- 📊 Analytics with PostHog
+- 🎁 Automatic changelog generation with Semantic Release
+- 🔍 Visual testing with Percy (Optional)
+- 💡 Absolute Imports using `@` prefix
+- 🗂 VSCode configuration: Debug, Settings, Tasks and Extensions
+- 🤖 SEO metadata, JSON-LD and Open Graph tags
+- 🗺️ Sitemap.xml and robots.txt
+- 👷 Automatic dependency updates with Dependabot
+- ⌘ Database exploration with Drizzle Studio and CLI migration tool with Drizzle Kit
+- ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+- 🌈 Include a FREE minimalist theme
+- 💯 Maximize lighthouse score
