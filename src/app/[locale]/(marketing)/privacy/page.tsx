@@ -27,7 +27,7 @@ export default async function Privacy(props: IAboutProps) {
         <h1>Privacy Policy - CRYPTO CASH CONTROL TEAM</h1>
         <p>
           <strong>Last updated:</strong>
-          <span>[Date]</span>
+          <span>[2025-06-01]</span>
         </p>
 
         <p>
@@ -110,11 +110,6 @@ export default async function Privacy(props: IAboutProps) {
         <h2>6. Changes to the Privacy Policy</h2>
         <p>
           We reserve the right to update this Privacy Policy at any time. Any changes will be communicated through our platform, and the updated policy will be effective upon posting.
-        </p>
-
-        <p>
-          For any questions or concerns regarding your privacy, please contact us at 
-          <a href="mailto:contact@cryptocashcontrolteam.com">contact@cryptocashcontrolteam.com</a>.
         </p>
       </div>
 
