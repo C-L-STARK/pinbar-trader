@@ -8,12 +8,12 @@
     "sign_up_link": "注册"
   },
   "BaseTemplate": {
-    "description": "这是一个使用 Nextjs 和 Tailwind CSS 的启动代码模板",
+    "description": "专业的数字货币交易 (现货, 合约, 期权, ...) 团队",
     "made_with": "制作于 <author></author>。"
   },
   "Index": {
-    "meta_title": "Next.js 启动模板展示",
-    "meta_description": "Next.js 启动模板是您项目的完美启动代码。使用 Next.js 框架构建您的 React 应用。",
+    "meta_title": "CRYPTO CASH CONTROL",
+    "meta_description": "CRYPTO CASH CONTROL",
     "sponsors_title": "赞助商"
   },
   "Counter": {

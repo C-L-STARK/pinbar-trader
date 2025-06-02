@@ -28,8 +28,6 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
-      <p>{t('about_paragraph')}</p>
-
       <div className="mt-2 text-center text-sm">
         {`${t('translation_powered_by')} `}
         <a

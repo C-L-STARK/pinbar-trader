@@ -5,7 +5,7 @@ import { enUS, zhCN } from '@clerk/localizations';
 const localePrefix: LocalePrefixMode = 'as-needed';
 
 export const AppConfig = {
-  name: 'Nextjs Starter',
+  name: 'CRYPTO CASH CONTROL',
   locales: ['en', 'zh'],
   defaultLocale: 'en',
   localePrefix,
