@@ -1,4 +1,8 @@
 import { createNavigation } from 'next-intl/navigation';
-import { routing } from './i18nRouting';
+import { AppConfig } from '@/utils/AppConfig';
 
-export const { usePathname } = createNavigation(routing);
+export const { Link, redirect, usePathname, useRouter } = createNavigation({
+  locales: AppConfig.locales,
+  defaultLocale: AppConfig.defaultLocale,
+  localePrefix: AppConfig.localePrefix,
+});

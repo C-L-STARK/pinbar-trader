@@ -4,9 +4,13 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import createMiddleware from 'next-intl/middleware';
 import { NextResponse } from 'next/server';
 import arcjet from '@/libs/Arcjet';
-import { routing } from './libs/i18nRouting';
+import { locales, defaultLocale, localePrefix } from '@/i18n';
 
-const handleI18nRouting = createMiddleware(routing);
+const handleI18nRouting = createMiddleware({
+  locales,
+  defaultLocale,
+  localePrefix,
+});
 
 const isProtectedRoute = createRouteMatcher([
   '/dashboard(.*)',
@@ -71,8 +75,5 @@ export default async function middleware(
 }
 
 export const config = {
-  // Match all pathnames except for
-  // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
-  // - … the ones containing a dot (e.g. `favicon.ico`)
-  matcher: '/((?!_next|_vercel|monitoring|.*\\..*).*)',
+  matcher: ['/((?!api|_next|.*\\..*).*)']
 };

@@ -1,20 +1,18 @@
 'use client';
 
+import { NextIntlClientProvider } from 'next-intl';
 import NextError from 'next/error';
-import { routing } from '@/libs/i18nRouting';
+import { locales, defaultLocale } from '@/i18n';
 
 export default function GlobalError(props: {
   error: Error & { digest?: string };
 }) {
-
   return (
-    <html lang={routing.defaultLocale}>
+    <html lang={defaultLocale}>
       <body>
-        {/* `NextError` is the default Next.js error page component. Its type
-        definition requires a `statusCode` prop. However, since the App Router
-        does not expose status codes for errors, we simply pass 0 to render a
-        generic error message. */}
-        <NextError statusCode={0} />
+        <NextIntlClientProvider locale={defaultLocale}>
+          <NextError statusCode={500} />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

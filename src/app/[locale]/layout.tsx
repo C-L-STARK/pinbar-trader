@@ -1,58 +1,44 @@
 import type { Metadata } from 'next';
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+import { AppConfig } from '@/utils/AppConfig';
 import { PostHogProvider } from '@/components/analytics/PostHogProvider';
-import { routing } from '@/libs/i18nRouting';
 import '@/styles/global.css';
 
-export const metadata: Metadata = {
-  icons: [
-    {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon-32x32.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon-16x16.png',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-  ],
-};
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const awaitedParams = await params;
+  const locale = awaitedParams.locale;
 
-export function generateStaticParams() {
-  return routing.locales.map(locale => ({ locale }));
+  return {
+    title: 'CRYPTO CASH CONTROL',
+    description: 'A modern cryptocurrency trading platform',
+  };
 }
 
-export default async function RootLayout(props: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
+export function generateStaticParams() {
+  return AppConfig.locales.map(locale => ({ locale }));
+}
 
-  if (!hasLocale(routing.locales, locale)) {
+export default async function RootLayout({ children, params }: { children: React.ReactNode, params: { locale: string } }) {
+  const awaitedParams = await params;
+  const locale = awaitedParams.locale;
+
+  if (!AppConfig.locales.includes(locale)) notFound();
+
+  let messages;
+  try {
+    messages = (await import(`@/messages/${locale}.json`)).default;
+  } catch (error) {
+    console.error(`Failed to load messages for locale ${locale}:`, error);
     notFound();
   }
-
-  setRequestLocale(locale);
 
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <PostHogProvider>
-            {props.children}
+            {children}
           </PostHogProvider>
         </NextIntlClientProvider>
       </body>

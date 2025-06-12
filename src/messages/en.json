@@ -1,0 +1,39 @@
+{
+  "RootLayout": {
+    "home_link": "Home",
+    "about_link": "About",
+    "counter_link": "Counter",
+    "portfolio_link": "Portfolio",
+    "sign_in_link": "Sign In",
+    "sign_up_link": "Sign Up",
+    "site_title": "CRYPTO CASH CONTROL"
+  },
+  "BaseTemplate": {
+    "description": "A modern cryptocurrency trading platform",
+    "made_with": "Made with"
+  },
+  "SignIn": {
+    "title": "Sign In",
+    "description": "Welcome back! Please sign in to your account.",
+    "meta_title": "Sign In - CRYPTO CASH CONTROL",
+    "meta_description": "Sign in to your CRYPTO CASH CONTROL account to start trading cryptocurrencies."
+  },
+  "SignUp": {
+    "title": "Sign Up",
+    "description": "Create a new account to start trading cryptocurrencies.",
+    "meta_title": "Sign Up - CRYPTO CASH CONTROL",
+    "meta_description": "Create a new CRYPTO CASH CONTROL account to start trading cryptocurrencies."
+  },
+  "About": {
+    "title": "About Us",
+    "description": "Learn more about CRYPTO CASH CONTROL",
+    "meta_title": "About - CRYPTO CASH CONTROL",
+    "meta_description": "Learn more about CRYPTO CASH CONTROL, a modern cryptocurrency trading platform."
+  },
+  "Index": {
+    "data_source": "Data Source:",
+    "social_media_follow": "Follow us for more information:",
+    "slogan_title": "Professional Digital Asset Trading",
+    "slogan_description": "Empowering your crypto trading with precision and expertise."
+  }
+} 

@@ -1,70 +1,46 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { BaseTemplate } from '@/templates/BaseTemplate';
+import { NavigationMenuItem } from '@/components/ui/navigation-menu';
+import { NavigationLink } from '@/components/ui/navigation-link';
 
-export default async function Layout(props: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
-  const t = await getTranslations({
-    locale,
-    namespace: 'RootLayout',
-  });
+export default async function MarketingLayout({ children, params }: { children: React.ReactNode; params: { locale: string } }) {
+  const awaitedParams = await params;
+  const locale = awaitedParams.locale;
+
+  const t = await getTranslations({ locale, namespace: 'RootLayout' });
 
   return (
-    <>
-      <BaseTemplate
-        leftNav={(
-          <>
-            <li>
-              <Link
-                href="/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('home_link')}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('about_link')}
-              </Link>
-            </li>
-          </>
-        )}
-        rightNav={(
-          <>
-            <li>
-              <Link
-                href="/sign-in/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('sign_in_link')}
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/sign-up/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                {t('sign_up_link')}
-              </Link>
-            </li>
-
-            <li>
-              <LocaleSwitcher />
-            </li>
-          </>
-        )}
-      >
-        <div className="py-5 text-xl [&_p]:my-6">{props.children}</div>
-      </BaseTemplate>
-    </>
+    <BaseTemplate
+      leftNav={
+        <>
+          <NavigationMenuItem>
+            <NavigationLink href="/">{t('home_link')}</NavigationLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationLink href="/about">{t('about_link')}</NavigationLink>
+          </NavigationMenuItem>
+        </>
+      }
+      rightNav={
+        <>
+          <NavigationMenuItem>
+            <NavigationLink href="/sign-in" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              {t('sign_in_link')}
+            </NavigationLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationLink href="/sign-up" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+              {t('sign_up_link')}
+            </NavigationLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <LocaleSwitcher />
+          </NavigationMenuItem>
+        </>
+      }
+    >
+      {children}
+    </BaseTemplate>
   );
 }

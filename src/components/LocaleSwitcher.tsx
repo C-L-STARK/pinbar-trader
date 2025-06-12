@@ -1,33 +1,26 @@
 'use client';
 
-import type { ChangeEventHandler } from 'react';
+import {
+  useRouter,
+  usePathname,
+} from '@/libs/i18nNavigation';
 import { useLocale } from 'next-intl';
-import { useRouter } from 'next/navigation';
-import { usePathname } from '@/libs/i18nNavigation';
-import { routing } from '@/libs/i18nRouting';
 
-export const LocaleSwitcher = () => {
+export function LocaleSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
 
-  const handleChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
-    router.push(`/${event.target.value}${pathname}`);
-    router.refresh(); // Ensure the page takes the new locale into account related to the issue #395
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLocale = event.target.value;
+    router.push(pathname, { locale: newLocale });
   };
 
   return (
-    <select
-      defaultValue={locale}
-      onChange={handleChange}
-      className="border border-gray-300 font-medium focus:outline-hidden focus-visible:ring-3"
-      aria-label="lang-switcher"
-    >
-      {routing.locales.map(elt => (
-        <option key={elt} value={elt}>
-          {elt.toUpperCase()}
-        </option>
-      ))}
+    <select defaultValue={locale} onChange={handleChange}>
+      {/* Hardcoded language names */}
+      <option value="en">English</option>
+      <option value="zh">中文</option>
     </select>
   );
-};
+}

@@ -5,11 +5,12 @@ export default async function CenteredLayout(props: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
 
   return (
     <div className="flex min-h-screen items-center justify-center">
-      {props.children}
+      <div className="w-full max-w-md p-8">
+        {props.children}
+      </div>
     </div>
   );
 }

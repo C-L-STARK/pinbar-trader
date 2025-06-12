@@ -2,7 +2,7 @@ import type { LocalizationResource } from '@clerk/types';
 import type { LocalePrefixMode } from 'next-intl/routing';
 import { enUS, zhCN } from '@clerk/localizations';
 
-const localePrefix: LocalePrefixMode = 'as-needed';
+const localePrefix: LocalePrefixMode = 'always';
 
 export const AppConfig = {
   name: 'CRYPTO CASH CONTROL',
