@@ -1,0 +1,11 @@
+{
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    // 仅在此目录覆盖默认设置
+    "strict": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off"
+  }
+}
