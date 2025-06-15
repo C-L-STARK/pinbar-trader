@@ -14,8 +14,8 @@ export default function Pricing() {
         立即加入 CRYPTO CASH CONTROL <br /> 获得 <Cover>稳定收益</Cover>
       </h1>
       <div className="pl-15 pr-15">
-        <div className="flex flex-col md:flex-row items-center w-full justify-between">
-          <CardSpotlight className="h-120 w-90">
+        <div className="flex flex-col md:flex-row items-center w-full gap-2">
+          <CardSpotlight className="h-125 grow">
             <p className="text-xl font-bold relative z-20 mt-2 text-white">
               免费计划
             </p>
@@ -35,7 +35,7 @@ export default function Pricing() {
               需要您自己控制好相关风险。我们对您的任何损失概不负责。
             </p>
           </CardSpotlight>
-          <CardSpotlight className="h-120 w-90 mt-2 md:mt-0">
+          <CardSpotlight className="h-125 grow mt-2 md:mt-0">
             <p className="text-xl font-bold relative z-20 mt-2 text-white">
               基础计划
             </p>
@@ -63,7 +63,7 @@ export default function Pricing() {
               </Link>
             </ShimmerButton>
           </CardSpotlight>
-          <CardSpotlight className="h-120 w-90 mt-2 md:mt-0">
+          <CardSpotlight className="h-125 grow mt-2 md:mt-0">
             <p className="text-xl font-bold relative z-20 mt-2 text-white">
               高级计划
             </p>
@@ -94,7 +94,7 @@ export default function Pricing() {
             </ShimmerButton>
           </CardSpotlight>
         </div>
-        <CardSpotlight className="h-60 w-full mt-2">
+        <CardSpotlight className="w-full mt-2">
           <p className="text-xl font-bold relative z-20 mt-2 text-white">
             大客户计划
           </p>
