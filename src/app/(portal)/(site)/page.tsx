@@ -19,19 +19,25 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import React, { useState } from 'react';
 import CryptoMarquee from '@/components/custom/CryptoMarquee';
 import HistoricalEarnings from "@/components/custom/HistoricalEarnings";
+import Pricing from "@/components/custom/Pricing";
+import MeetYou from "@/components/custom/MeetYou";
 
 const navItems = [
   {
-    name: "收益报表",
+    name: "收益",
     link: "#profits",
   },
   {
-    name: "会员价格",
+    name: "价格",
     link: "#pricing",
   },
   {
+    name: "工具",
+    link: "#tools",
+  },
+  {
     name: "联系我们",
-    link: "#contact",
+    link: "mailto:x.stark.dylan@gmail.com",
   },
 ];
 
@@ -81,6 +87,8 @@ const DummyContent = () => {
         </div>
       </BackgroundBeamsWithCollision>
       <HistoricalEarnings />
+      <Pricing />
+      <MeetYou />
       <Flex width="100%" align="center" justify="center" className="p-2 pt-4">
         <Text color="gray" size="1">
           2024-2025 © CRYPTO CASH CONTROL TEAM
@@ -118,7 +126,7 @@ export default function Home() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-2">
-            <NavbarButton variant="primary">加入我们</NavbarButton>
+            <NavbarButton href="mailto:x.stark.dylan@gmail.com" variant="primary">加入我们</NavbarButton>
           </div>
         </NavBody>
 
@@ -151,6 +159,7 @@ export default function Home() {
                 onClick={() => joinus()}
                 variant="primary"
                 className="w-full"
+                href="mailto:x.stark.dylan@gmail.com"
               >
                 加入我们
               </NavbarButton>
