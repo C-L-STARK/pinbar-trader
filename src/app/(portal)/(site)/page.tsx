@@ -15,14 +15,10 @@ import { Code, Flex, Text } from "@radix-ui/themes";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { SparklesCore } from "@/components/ui/sparkles";
-import {
-  TextRevealCard,
-  TextRevealCardDescription,
-  TextRevealCardTitle,
-} from "@/components/ui/text-reveal-card";
 
 import React, { useState } from 'react';
 import CryptoMarquee from '@/components/custom/CryptoMarquee';
+import HistoricalEarnings from "@/components/custom/HistoricalEarnings";
 
 const navItems = [
   {
@@ -84,19 +80,7 @@ const DummyContent = () => {
           </h1>
         </div>
       </BackgroundBeamsWithCollision>
-      <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] w-full">
-        <TextRevealCard
-          text="想拥有专业的交易团队？"
-          revealText="CRYPTO CASH CONTROL"
-        >
-          <TextRevealCardTitle>
-            有些时候，我们真的可以帮助你
-          </TextRevealCardTitle>
-          <TextRevealCardDescription>
-            {blogContent.description}
-          </TextRevealCardDescription>
-        </TextRevealCard>
-      </div>
+      <HistoricalEarnings />
       <Flex width="100%" align="center" justify="center" className="p-2 pt-4">
         <Text color="gray" size="1">
           2024-2025 © CRYPTO CASH CONTROL TEAM
