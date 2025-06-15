@@ -126,7 +126,7 @@ export default function Home() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-2">
-            <NavbarButton href="mailto:x.stark.dylan@gmail.com" variant="primary">加入我们</NavbarButton>
+            <NavbarButton onClick={() => joinus()} variant="primary">加入我们</NavbarButton>
           </div>
         </NavBody>
 
@@ -159,7 +159,6 @@ export default function Home() {
                 onClick={() => joinus()}
                 variant="primary"
                 className="w-full"
-                href="mailto:x.stark.dylan@gmail.com"
               >
                 加入我们
               </NavbarButton>

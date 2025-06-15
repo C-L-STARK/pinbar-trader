@@ -249,15 +249,12 @@ export const NavbarLogo = () => {
 
 export const NavbarButton = ({
   href,
-  as: Tag = "a",
   children,
   className,
   variant = "primary",
-  ...props
 }: {
   href?: string;
-  as?: React.ElementType;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
 } & (
@@ -277,12 +274,10 @@ export const NavbarButton = ({
   };
 
   return (
-    <Tag
-      href={href || undefined}
-      className={cn(baseStyles, variantStyles[variant], className)}
-      {...props}
-    >
-      {children}
-    </Tag>
+    <a
+      href="mailto:x.stark.dylan@gmail.com"
+      className={cn(baseStyles, variantStyles[variant], className)}>
+      加入我们
+    </a>
   );
 };
