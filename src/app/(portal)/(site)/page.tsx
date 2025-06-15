@@ -11,7 +11,6 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
-import { useState } from "react";
 import { Code, Flex, Text } from "@radix-ui/themes";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
@@ -21,6 +20,9 @@ import {
   TextRevealCardDescription,
   TextRevealCardTitle,
 } from "@/components/ui/text-reveal-card";
+
+import React, { useState } from 'react';
+import CryptoMarquee from '@/components/custom/CryptoMarquee';
 
 const navItems = [
   {
@@ -114,7 +116,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative w-full">
+    <div className="w-full">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"
@@ -173,6 +175,7 @@ export default function Home() {
         </MobileNav>
       </Navbar>
       <DummyContent />
+      <CryptoMarquee />
 
       {/* Navbar */}
     </div>
