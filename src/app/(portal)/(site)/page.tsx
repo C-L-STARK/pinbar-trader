@@ -10,17 +10,18 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { Code, Flex, Text } from "@radix-ui/themes";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { SparklesCore } from "@/components/ui/sparkles";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CryptoMarquee from '@/components/custom/CryptoMarquee';
 import HistoricalEarnings from "@/components/custom/HistoricalEarnings";
 import Pricing from "@/components/custom/Pricing";
 import MeetYou from "@/components/custom/MeetYou";
+import { SectionCards } from "@/components/section-cards"
+import { ClientTweetCard } from "@/components/magicui/client-tweet-card";
 
 const navItems = [
   {
@@ -41,22 +42,6 @@ const navItems = [
   },
 ];
 
-const words = [
-  {
-    text: "你好，"
-  },
-  {
-    text: "这里是"
-  },
-  {
-    text: "CRYPTO CASH CONTROL",
-    className: "text-[#0600abac] dark:text-[#0600abac]"
-  },
-  {
-    text: "团队，欢迎访问！"
-  },
-]
-
 const blogContent = {
   description:
     "CRYPTO CASH CONTROL 团队成立于 2024 年底，由三位核心成员组成，拥有数十年经验的交易员、全栈工程师以及一位资深市场分析专家。我们的交易系统由现货，ALT-COIN 合约，美式期权对冲构成。",
@@ -69,7 +54,9 @@ const DummyContent = () => {
       <BackgroundBeamsWithCollision>
         <div className="relative">
           <Flex width="100%" align="center" justify="center">
-            <TypewriterEffectSmooth words={words} />
+            <p className="mb-10 text-center text-2xl">
+              你好，这里是 CRYPTO CASH CONTROL 团队，欢迎访问！
+            </p>
           </Flex>
           <p className="mb-10 text-center text-sm text-zinc-500">
             我们的数字货币辅助交易工具正在加速开发并且
@@ -89,11 +76,6 @@ const DummyContent = () => {
       <HistoricalEarnings />
       <Pricing />
       <MeetYou />
-      <Flex width="100%" align="center" justify="center" className="p-2 pt-4">
-        <Text color="gray" size="1">
-          2024-2025 © CRYPTO CASH CONTROL TEAM
-        </Text>
-      </Flex>
     </div>
   );
 };
@@ -167,6 +149,23 @@ export default function Home() {
         </MobileNav>
       </Navbar>
       <DummyContent />
+      <div className="flex flex-1 flex-col">
+        <div className="@container/main flex flex-1 flex-col gap-2">
+          <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+            <SectionCards />
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center p-6">
+        <ClientTweetCard id="1926928623916704138" />
+        <ClientTweetCard className="ml-6" id="1940035908713246882" />
+        <ClientTweetCard className="ml-6" id="1940289685840175176" />
+      </div>
+      <Flex width="100%" align="center" justify="center" className="p-2 pt-4 pb-8">
+        <Text color="gray" size="1">
+          2024-2025 © CRYPTO CASH CONTROL TEAM
+        </Text>
+      </Flex>
       <CryptoMarquee />
 
       {/* Navbar */}

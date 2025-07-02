@@ -6,7 +6,7 @@ import {Text} from "@radix-ui/themes";
 
 export default function MeetYou() {
   return (
-    <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full flex items-center justify-center w-full mt-20 mb-20">
+    <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full flex items-center justify-center w-full mt-20 mb-10">
       {/*<MacbookScroll*/}
       {/*  title={*/}
       {/*    <span>*/}
