@@ -17,12 +17,12 @@ export function SectionCards() {
         <CardHeader>
           <CardDescription>目前管理资产规模</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            $5,710,000.41
+            $12,151,928.33
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingUp />
-              +8.5%
+              +97.5%
             </Badge>
           </CardAction>
         </CardHeader>
@@ -44,13 +44,13 @@ export function SectionCards() {
           <CardAction>
             <Badge variant="outline">
               <IconTrendingDown />
-              -5%
+              -0%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            本月下降 5%，退出 1 位大客户 <IconTrendingDown className="size-4" />
+            本月客户数量稳定 <IconTrendingDown className="size-4" />
           </div>
           <div className="text-muted-foreground">
             该数据仅供参考，且不包含团队合作
@@ -61,18 +61,18 @@ export function SectionCards() {
         <CardHeader>
           <CardDescription>仓位占用金额</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            $1,730,140.94
+            $120590.13
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingUp />
-              +7.5%
+              -95%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            本月增持现货较多 <IconTrendingUp className="size-4" />
+            本月止盈了全部仓位 <IconTrendingUp className="size-4" />
           </div>
           <div className="text-muted-foreground">该数据为按月更新</div>
         </CardFooter>
@@ -81,12 +81,12 @@ export function SectionCards() {
         <CardHeader>
           <CardDescription>平均利润率</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            27.5%
+            64.3%
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingUp />
-              +2.5%
+              +241.5%
             </Badge>
           </CardAction>
         </CardHeader>
