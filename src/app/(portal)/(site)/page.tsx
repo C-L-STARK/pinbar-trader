@@ -40,6 +40,10 @@ const navItems = [
     name: "联系我们",
     link: "mailto:x.stark.dylan@gmail.com",
   },
+  {
+    name: "交易员招聘",
+    link: "https://www.yuque.com/pikaqiu-qvuvh/cryptocashcontrol/hh9f9nzgd5ovag9y?singleDoc#",
+  },
 ];
 
 const blogContent = {
