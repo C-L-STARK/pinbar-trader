@@ -93,7 +93,11 @@ const DummyContent = () => {
             <div className="space-y-12">
               {/* Phase 1 */}
               <div className="relative flex items-center md:justify-between">
-                <div className="w-full md:w-5/12 md:pr-8">
+                <div className="hidden md:block w-5/12"></div>
+                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-600 border-4 border-white dark:border-gray-900 rounded-full items-center justify-center shadow-lg z-10">
+                  <span className="text-white font-bold text-lg">1</span>
+                </div>
+                <div className="w-full md:w-5/12 md:pl-8">
                   <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border-l-4 border-purple-600 hover:shadow-xl transition-shadow">
                     <div className="inline-block px-4 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-sm font-semibold mb-3">
                       第1-5个工作日
@@ -109,10 +113,6 @@ const DummyContent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-600 border-4 border-white dark:border-gray-900 rounded-full items-center justify-center shadow-lg z-10">
-                  <span className="text-white font-bold text-lg">1</span>
-                </div>
-                <div className="hidden md:block w-5/12"></div>
               </div>
 
               {/* Phase 2 */}
