@@ -42,10 +42,10 @@ export default function TiantiPanel() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              天梯排行榜
+              天梯趋势指示器
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              实时交易员排名数据
+              实时量化趋势分析数据
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function TiantiPanel() {
           <img
             key={refreshKey}
             src={`${imageUrl}?t=${refreshKey}`}
-            alt="天梯排行榜"
+            alt="天梯趋势指示器"
             className="w-full h-auto rounded-lg"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
