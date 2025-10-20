@@ -34,7 +34,8 @@ const nextConfig: NextConfig = {
   },
   // Tell Next.js these packages use native Node.js modules
   // and should not be bundled by webpack
-  serverExternalPackages: ['technicalindicators', 'binance-api-node', 'uuid'],
+  // Note: technicalindicators is a pure JS package, so we let webpack bundle it
+  serverExternalPackages: ['binance-api-node'],
 };
 
 export default nextConfig;
