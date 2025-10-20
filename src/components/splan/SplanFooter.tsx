@@ -71,7 +71,7 @@ export default function SplanFooter() {
           <div>
             <h4 className="font-bold mb-4">联系我们</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>魔界之门是窄门</li>
+              <li>培养真正适合的人</li>
               <li>留下极少数,劝返大多数</li>
               <li className="pt-2">
                 <Link href="/splan/join-us"

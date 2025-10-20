@@ -26,7 +26,7 @@ export default function CoursesPage() {
               我们不提供录播课程、不售卖教学视频、不搞付费培训。我们是<strong>交易员军队训练营</strong>，用军事化管理方式将你训练成正规军。
             </p>
             <p className="text-gray-300 leading-relaxed">
-              在这里，你要么通过考核成为战士，要么被劝退离开。<strong className="text-white">魔界之门是窄门，我们的理念是留下极少数，劝返大多数。</strong>
+              在这里，你要么通过考核成为战士，要么被劝退离开。<strong className="text-white">培养真正适合的人，留下极少数，劝返大多数。</strong>
             </p>
           </div>
         </section>
