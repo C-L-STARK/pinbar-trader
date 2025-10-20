@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
           ? strategy.calculateStopLoss(
               signal.price,
               signalSide,
-              signal.indicators.atr
+              signal.indicators
             )
           : signal.price * (signal.type === 'long' ? 0.99 : 1.01);
 
