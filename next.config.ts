@@ -26,13 +26,11 @@ const nextConfig: NextConfig = {
     // Ensure proper module resolution
     config.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx', '.json'];
 
-    // Don't externalize these packages - let webpack bundle them
-    config.resolve.alias = {
-      ...config.resolve.alias,
-    };
-
     return config;
   },
+  // Tell Next.js these packages use native Node.js modules
+  // and should not be bundled by webpack
+  serverExternalPackages: ['technicalindicators', 'binance-api-node', 'uuid'],
 };
 
 export default nextConfig;
