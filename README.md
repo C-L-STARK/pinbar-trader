@@ -293,7 +293,7 @@ XAUUSD混合策略结合5个技术指标，通过多重确认提高信号准确�
 
 **申请流程：**
 1. 完成心理测评
-2. 发送邮件至 x.stark.dylan@gmail.com
+2. 发送邮件至 1526824204@qq.com
 3. 获取USDT/USDC捐赠地址
 4. 完成捐赠后开始培训
 
@@ -542,7 +542,7 @@ npm run build
 ## 📧 联系方式
 
 - **网站**: [源计划职业交易员孵化器](https://pinbar-trader.vercel.app)
-- **邮箱**: x.stark.dylan@gmail.com
+- **邮箱**: 1526824204@qq.com
 - **Twitter**: [@splan_trader](https://x.com/splan_trader)
 - **GitHub**: [C-L-STARK/pinbar-trader](https://github.com/C-L-STARK/pinbar-trader)
 
