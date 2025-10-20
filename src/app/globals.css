@@ -1,3 +1,6 @@
+/* Import Radix UI first so Tailwind can override its styles */
+@import "@radix-ui/themes/styles.css";
+
 /* use tailwindcss !! */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -145,9 +148,6 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
-/* use radix-ui with high level - import first to allow Tailwind to override */
-@import "@radix-ui/themes/styles.css";
 
 @layer base {
   * {

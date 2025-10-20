@@ -3,6 +3,7 @@ import { Theme } from "@radix-ui/themes";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import UnifiedNavbar from "@/components/layout/UnifiedNavbar";
+import SplanFooter from "@/components/splan/SplanFooter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,12 +24,13 @@ export default function PortalLayout({
   return (
     <html lang="zh-CN" className={inter.variable}>
       <body>
-        <Theme accentColor="iris" scaling="90%" grayColor="olive" appearance="inherit" radius="small">
-          <UnifiedNavbar />
-          <main className="pt-16">
+        <UnifiedNavbar />
+        <main className="pt-16">
+          <Theme accentColor="iris" scaling="90%" grayColor="olive" appearance="inherit" radius="small">
             {children}
-          </main>
-        </Theme>
+          </Theme>
+        </main>
+        <SplanFooter />
       </body>
     </html>
   );

@@ -6,7 +6,6 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import EmailContactModal from '@/components/custom/EmailContactModal';
-import SplanFooter from '@/components/splan/SplanFooter';
 
 const DummyContent = () => {
   const router = useRouter();
@@ -370,7 +369,6 @@ export default function Home() {
         />
       </div>
       <DummyContent />
-      <SplanFooter />
     </div>
   );
 }
