@@ -85,7 +85,7 @@ export default function JoinUsModal({ isOpen, onClose }: JoinUsModalProps) {
 
                 <div className="flex flex-col gap-3">
                   <a
-                    href="mailto:x.stark.dylan@gmail.com?subject=申请加入源计划职业交易员孵化器"
+                    href="mailto:1526824204@qq.com?subject=申请加入源计划职业交易员孵化器"
                     className="w-full py-3 px-6 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all"
                   >
                     📧 联系团队长

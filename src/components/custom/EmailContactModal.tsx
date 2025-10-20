@@ -10,7 +10,7 @@ interface EmailContactModalProps {
 }
 
 export default function EmailContactModal({ isOpen, onClose, title = "职业交易员面试" }: EmailContactModalProps) {
-  const emailAddress = "x.stark.dylan@gmail.com";
+  const emailAddress = "1526824204@qq.com";
   const emailSubject = title;
 
   const handleSendEmail = () => {

@@ -230,7 +230,7 @@ export default function DonatePage() {
                 <div className="flex-1">
                   <h4 className="font-bold text-gray-900 dark:text-white mb-1">发送邮件申请</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    邮件至 <span className="font-mono text-blue-600 dark:text-blue-400">x.stark.dylan@gmail.com</span>，说明您的意向
+                    邮件至 <span className="font-mono text-blue-600 dark:text-blue-400">1526824204@qq.com</span>，说明您的意向
                   </p>
                 </div>
               </div>
@@ -269,7 +269,7 @@ export default function DonatePage() {
               立即完成心理测评
             </a>
             <a
-              href="mailto:x.stark.dylan@gmail.com?subject=申请成为试用会员&body=您好，我想申请成为90天试用会员，已完成心理测评。"
+              href="mailto:1526824204@qq.com?subject=申请成为试用会员&body=您好，我想申请成为90天试用会员，已完成心理测评。"
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg text-center"
             >
               📧 发送邮件申请

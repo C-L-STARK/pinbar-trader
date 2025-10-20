@@ -258,7 +258,7 @@ export const NavbarButton = ({
 
   return (
     <a
-      href="mailto:x.stark.dylan@gmail.com"
+      href="mailto:1526824204@qq.com"
       className={cn(baseStyles, variantStyles[variant], className)}>
       加入我们
     </a>

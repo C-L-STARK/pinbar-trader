@@ -57,7 +57,7 @@ export default function Pricing() {
             </p>
             <ShimmerButton className="shadow-2xl mt-2">
               <Link
-                href="mailto:x.stark.dylan@gmail.com"
+                href="mailto:1526824204@qq.com"
                 className="text-center text-sm font-medium leading-none text-white">
                 立即咨询
               </Link>
@@ -87,7 +87,7 @@ export default function Pricing() {
             </p>
             <ShimmerButton className="shadow-2xl mt-2">
               <Link
-                href="mailto:x.stark.dylan@gmail.com"
+                href="mailto:1526824204@qq.com"
                 className="text-center text-sm font-medium leading-none text-white">
                 立即咨询
               </Link>
