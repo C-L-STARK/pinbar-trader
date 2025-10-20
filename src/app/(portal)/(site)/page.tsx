@@ -17,7 +17,7 @@ const DummyContent = () => {
         <div className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center py-20">
           <div className="w-full">
             <Flex width="100%" align="center" justify="center" direction="column">
-              <div className="mb-4">
+              <div className="mb-4 flex justify-center">
                 <span className="px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-semibold border border-purple-500/30">
                   Professional Trader Incubation Program
                 </span>
