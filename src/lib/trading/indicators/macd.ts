@@ -1,4 +1,4 @@
-import { MACD } from 'technicalindicators';
+import { calculateMACD as calculateMACDPure } from './pure-indicators';
 import type { Candle, MACDResult } from '../types';
 
 export interface MACDConfig {
@@ -33,15 +33,8 @@ export function calculateMACD(
   // Extract close prices
   const closePrices = candles.map(c => c.close);
 
-  // Calculate MACD using technicalindicators library
-  const macdValues = MACD.calculate({
-    values: closePrices,
-    fastPeriod: fastPeriod,
-    slowPeriod: slowPeriod,
-    signalPeriod: signalPeriod,
-    SimpleMAOscillator: false,
-    SimpleMASignal: false,
-  });
+  // Calculate MACD using pure TypeScript implementation
+  const macdValues = calculateMACDPure(closePrices, fastPeriod, slowPeriod, signalPeriod);
 
   // Convert to our interface format
   const results: MACDResult[] = macdValues.map(m => ({

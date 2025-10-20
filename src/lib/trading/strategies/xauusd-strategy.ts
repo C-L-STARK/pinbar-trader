@@ -32,7 +32,7 @@ import {
   getLatestSuperTrend,
   SuperTrendConfig,
 } from '../indicators/supertrend';
-import { ATR } from 'technicalindicators';
+import { calculateATR } from '../indicators/pure-indicators';
 
 /**
  * XAUUSD Hybrid Optimized Strategy
@@ -99,12 +99,12 @@ export class XAUUSDStrategy {
       const supertrend = getLatestSuperTrend(candles, supertrendConfig);
 
       // Calculate ATR
-      const atrValues = ATR.calculate({
-        period: this.config.strategy.indicators.keltner.atrPeriod,
-        high: candles.map(c => c.high),
-        low: candles.map(c => c.low),
-        close: candles.map(c => c.close),
-      });
+      const atrValues = calculateATR(
+        candles.map(c => c.high),
+        candles.map(c => c.low),
+        candles.map(c => c.close),
+        this.config.strategy.indicators.keltner.atrPeriod
+      );
 
       if (
         !keltner ||

@@ -1,4 +1,4 @@
-import { BollingerBands } from 'technicalindicators';
+import { calculateBollingerBands as calculateBB } from './pure-indicators';
 import type { Candle, BollingerBandsResult } from '../types';
 
 export interface BollingerBandsConfig {
@@ -31,21 +31,10 @@ export function calculateBollingerBands(
   // Extract close prices
   const closePrices = candles.map(c => c.close);
 
-  // Calculate Bollinger Bands using technicalindicators library
-  const bbValues = BollingerBands.calculate({
-    period: period,
-    values: closePrices,
-    stdDev: deviation,
-  });
+  // Calculate Bollinger Bands using pure TypeScript implementation
+  const bbValues = calculateBB(closePrices, period, deviation);
 
-  // Convert to our interface format
-  const results: BollingerBandsResult[] = bbValues.map(bb => ({
-    upper: bb.upper,
-    middle: bb.middle,
-    lower: bb.lower,
-  }));
-
-  return results;
+  return bbValues;
 }
 
 /**

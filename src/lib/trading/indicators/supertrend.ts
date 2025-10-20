@@ -1,4 +1,4 @@
-import { ATR } from 'technicalindicators';
+import { calculateATR } from './pure-indicators';
 import type { Candle, SuperTrendResult } from '../types';
 
 export interface SuperTrendConfig {
@@ -41,12 +41,7 @@ export function calculateSuperTrend(
   const closePrices = candles.map(c => c.close);
 
   // Calculate ATR
-  const atrValues = ATR.calculate({
-    period: period,
-    high: highPrices,
-    low: lowPrices,
-    close: closePrices,
-  });
+  const atrValues = calculateATR(highPrices, lowPrices, closePrices, period);
 
   // Calculate HL/2 (middle price)
   const hlAverage = candles.map(c => (c.high + c.low) / 2);

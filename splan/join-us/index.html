@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="加入源计划专业交易员孵化器 - 成为专业交易员"
+    />
+    <title>加入我们 - 源计划专业交易员孵化器</title>
+    <style>
+      /* ===== CSS变量 ===== */
+      :root {
+        --primary-color: #2563eb;
+        --primary-dark: #1e40af;
+        --primary-light: #3b82f6;
+        --secondary-color: #059669;
+        --accent-color: #d97706;
+        --danger-color: #dc2626;
+
+        --text-primary: #111827;
+        --text-secondary: #4b5563;
+        --text-light: #9ca3af;
+        --text-white: #ffffff;
+
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8fafc;
+        --bg-tertiary: #f1f5f9;
+        --bg-gradient: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+
+        --border-color: #e2e8f0;
+        --border-radius: 0.375rem;
+        --border-radius-lg: 0.75rem;
+
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+        --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        --max-width: 1200px;
+      }
+
+      /* ===== 基础重置 ===== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-primary);
+        background: var(--bg-secondary);
+        min-height: 100vh;
+      }
+
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+
+      /* ===== 工具类 ===== */
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* ===== Hero区域 ===== */
+      .hero {
+        background: var(--bg-gradient);
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></svg>');
+        opacity: 0.5;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        padding: 0.5rem 1.25rem;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 2rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.95;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 400;
+      }
+
+      .hero-cta {
+        display: inline-flex;
+        gap: 1rem;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 1rem 2.5rem;
+        border-radius: var(--border-radius);
+        font-size: 1.0625rem;
+        font-weight: 600;
+        transition: all var(--transition);
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: white;
+        color: var(--primary-color);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      /* ===== 关于我们 ===== */
+      .about-section {
+        padding: 5rem 0;
+        background: var(--bg-primary);
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+
+      .section-subtitle {
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .about-content {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.0625rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+      }
+
+      /* ===== 优势特色 ===== */
+      .advantages-section {
+        padding: 5rem 0;
+        background: var(--bg-primary);
+      }
+
+      .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .advantage-card {
+        background: var(--bg-secondary);
+        padding: 2.5rem;
+        border-radius: var(--border-radius-lg);
+        border: 1px solid var(--border-color);
+        transition: all var(--transition);
+      }
+
+      .advantage-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        background: var(--bg-primary);
+      }
+
+      .advantage-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--primary-light)
+        );
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        color: white;
+      }
+
+      .advantage-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+
+      .advantage-description {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* ===== 我们提供 ===== */
+      .offer-section {
+        padding: 5rem 0;
+        background: var(--bg-secondary);
+      }
+
+      .offer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .offer-item {
+        background: var(--bg-primary);
+        padding: 2rem;
+        border-radius: var(--border-radius-lg);
+        border-left: 4px solid var(--primary-color);
+        transition: all var(--transition);
+      }
+
+      .offer-item:hover {
+        transform: translateX(8px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .offer-item h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+
+      .offer-item p {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* ===== 加入条件 ===== */
+      .requirements-section {
+        padding: 5rem 0;
+        background: var(--bg-primary);
+      }
+
+      .requirements-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .requirement-item {
+        display: flex;
+        gap: 1.5rem;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        background: var(--bg-secondary);
+        border-radius: var(--border-radius-lg);
+        border: 1px solid var(--border-color);
+        transition: all var(--transition);
+      }
+
+      .requirement-item:hover {
+        background: var(--bg-primary);
+        box-shadow: var(--shadow-md);
+      }
+
+      .requirement-icon {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--secondary-color), #10b981);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+
+      .requirement-content h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+
+      .requirement-content p {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* ===== 申请流程 ===== */
+      .process-section {
+        padding: 5rem 0;
+        background: var(--bg-secondary);
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .process-step {
+        position: relative;
+        text-align: center;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: var(--bg-gradient);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 1.5rem;
+      }
+
+      .step-title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+
+      .step-description {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* ===== CTA区域 ===== */
+      .cta-section {
+        padding: 5rem 0;
+        background: var(--bg-gradient);
+        color: white;
+        text-align: center;
+      }
+
+      .cta-content h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+      }
+
+      .cta-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.95;
+      }
+
+      .btn-large {
+        padding: 1.25rem 3rem;
+        font-size: 1.125rem;
+      }
+
+      /* ===== 响应式设计 ===== */
+      @media (max-width: 768px) {
+        .hero {
+          padding: 3rem 0;
+        }
+
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+
+        .hero-cta {
+          flex-direction: column;
+        }
+
+        .section-title {
+          font-size: 1.75rem;
+        }
+
+        .stats-grid,
+        .advantages-grid,
+        .offer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .process-steps {
+          grid-template-columns: 1fr;
+        }
+
+        .requirement-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .about-section,
+        .advantages-section,
+        .offer-section,
+        .requirements-section,
+        .process-section {
+          padding: 3rem 0;
+        }
+
+        .cta-content h2 {
+          font-size: 1.75rem;
+        }
+
+        .cta-content p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero区域 -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">专业交易员培养计划</div>
+          <h1 class="hero-title">源计划专业交易员孵化器</h1>
+          <p class="hero-subtitle">
+            系统化培养 • 实战化训练 • 专业化成长<br />从零基础到专业交易员的完整进阶之路
+          </p>
+          <div class="hero-cta">
+            <button class="btn-primary" onclick="scrollToSection('apply')">
+              立即申请
+            </button>
+            <button class="btn-secondary" onclick="scrollToSection('about')">
+              了解更多
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">关于源计划</h2>
+          <p class="section-subtitle">打造中国领先的专业交易员培养平台</p>
+        </div>
+        <div class="about-content">
+          <p>
+            源计划专业交易员孵化器，致力于通过系统化的培养体系、实战化的训练方法和专业化的指导团队，帮助有志于从事交易行业的学员，从零基础成长为具备专业素养和实战能力的专业交易员。
+          </p>
+          <br />
+          <p>
+            我们相信，成功的交易员不是天生的，而是通过科学的训练和持续的学习培养出来的。源计划为您提供完整的成长路径、专业的团队支持、丰富的实战机会和长期的发展支持。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="advantages-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">为什么选择源计划</h2>
+          <p class="section-subtitle">六大核心优势，助您成为专业交易员</p>
+        </div>
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon">📚</div>
+            <h3 class="advantage-title">系统化课程体系</h3>
+            <p class="advantage-description">
+              从基础到高级的完整课程体系，涵盖交易理论、技术分析、风险管理、交易心理等全方位内容，确保学员扎实掌握交易技能。
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">👨‍🏫</div>
+            <h3 class="advantage-title">资深团队长指导</h3>
+            <p class="advantage-description">
+              由多位有10年以上实战经验的专业交易员组成指导团队，提供一对一指导，分享真实交易经验和实用技巧。
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">💼</div>
+            <h3 class="advantage-title">实盘操作机会</h3>
+            <p class="advantage-description">
+              表现优秀的学员将获得实盘操作机会，在真实市场环境中验证所学知识，积累宝贵的实战经验。
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">🎯</div>
+            <h3 class="advantage-title">个性化培养方案</h3>
+            <p class="advantage-description">
+              根据每位学员的基础、特点和目标，制定个性化的学习计划和发展路径，确保最佳学习效果。
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">🤝</div>
+            <h3 class="advantage-title">长期成长支持</h3>
+            <p class="advantage-description">
+              提供长期的成长发展支持，包括交易机会推荐、资金支持、持续进修等，陪伴学员的整个交易生涯。
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon">👥</div>
+            <h3 class="advantage-title">专业交流社群</h3>
+            <p class="advantage-description">
+              加入活跃的交易员社群，与优秀的同行交流学习，分享经验，共同成长，建立有价值的人脉网络。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 我们提供 -->
+    <section class="offer-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">我们提供什么</h2>
+          <p class="section-subtitle">全方位的培养支持，助力您的交易事业</p>
+        </div>
+        <div class="offer-grid">
+          <div class="offer-item">
+            <h3>完整课程体系</h3>
+            <p>从基础到高级的系统化课程，涵盖外汇、黄金等多个交易品种</p>
+          </div>
+          <div class="offer-item">
+            <h3>实战训练营</h3>
+            <p>定期举办实战训练营，在真实市场环境中提升交易技能</p>
+          </div>
+          <div class="offer-item">
+            <h3>一对一辅导</h3>
+            <p>资深团队长提供个性化指导，帮助解决学习和交易中的具体问题</p>
+          </div>
+          <div class="offer-item">
+            <h3>交易工具支持</h3>
+            <p>提供专业的交易工具、数据分析平台和策略回测系统</p>
+          </div>
+          <div class="offer-item">
+            <h3>心理辅导服务</h3>
+            <p>专业的交易心理辅导，帮助建立正确的交易心态和情绪管理能力</p>
+          </div>
+          <div class="offer-item">
+            <h3>资金扶持计划</h3>
+            <p>优秀学员可获得资金支持，降低个人交易成本和风险</p>
+          </div>
+          <div class="offer-item">
+            <h3>交易机会推荐</h3>
+            <p>与多家交易平台合作，为优秀学员提供交易机会和资源对接</p>
+          </div>
+          <div class="offer-item">
+            <h3>持续学习支持</h3>
+            <p>终身学习权益，持续更新的课程内容和市场分析</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 加入条件 -->
+    <section class="requirements-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">我们在寻找</h2>
+          <p class="section-subtitle">符合这些条件的您，欢迎加入源计划</p>
+        </div>
+        <div class="requirements-content">
+          <div class="requirement-item">
+            <div class="requirement-icon">💡</div>
+            <div class="requirement-content">
+              <h3>对交易充满热情</h3>
+              <p>
+                真正热爱交易事业，愿意投入时间和精力学习，对金融市场有浓厚兴趣
+              </p>
+            </div>
+          </div>
+          <div class="requirement-item">
+            <div class="requirement-icon">🎓</div>
+            <div class="requirement-content">
+              <h3>具备学习能力</h3>
+              <p>有良好的学习习惯和自律性，能够持续学习和实践，不断提升自己</p>
+            </div>
+          </div>
+          <div class="requirement-item">
+            <div class="requirement-icon">💪</div>
+            <div class="requirement-content">
+              <h3>承受压力能力</h3>
+              <p>能够承受一定的心理压力，在亏损和挫折面前保持理性和冷静</p>
+            </div>
+          </div>
+          <div class="requirement-item">
+            <div class="requirement-icon">⏰</div>
+            <div class="requirement-content">
+              <h3>充足的学习时间</h3>
+              <p>每天至少能投入2-3小时进行学习和练习，周末能参加集中培训</p>
+            </div>
+          </div>
+          <div class="requirement-item">
+            <div class="requirement-icon">🚀</div>
+            <div class="requirement-content">
+              <h3>长期发展规划</h3>
+              <p>将交易作为长期发展方向，持续精进交易技能，不断提升自我</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 申请流程 -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">申请流程</h2>
+          <p class="section-subtitle">简单六步，开启您的专业交易员之路</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">提交申请</h3>
+            <p class="step-description">联系团队长，提交个人信息和学习意向</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">初步面谈</h3>
+            <p class="step-description">
+              与团队长进行初步沟通，了解您的背景和目标
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">能力评估</h3>
+            <p class="step-description">进行基础能力测试和心理素质评估</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">规则练习</h3>
+            <p class="step-description">学习并掌握交易规则，通过规则练习考核</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <h3 class="step-title">盈利练习</h3>
+            <p class="step-description">进行实战盈利练习，积累交易经验</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">6</div>
+            <h3 class="step-title">盈利考核</h3>
+            <p class="step-description">
+              进入盈利考核阶段，合格者将获得实盘操作机会
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="cta-section" id="apply">
+      <div class="container">
+        <div class="cta-content">
+          <h2>准备好开始您的交易员之路了吗？</h2>
+          <p>加入源计划，让我们一起实现您的交易梦想</p>
+          <button class="btn-primary btn-large" onclick="applyNow()">
+            立即申请加入
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // ===== 滚动到指定区域 =====
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      // ===== 立即申请 =====
+      function applyNow() {
+        alert("请联系团队长提交申请\n\n我们会尽快与您联系，安排初步面谈。");
+      }
+
+      // ===== 数字动画 =====
+      function animateNumber(element, target, suffix = "") {
+        const duration = 2000;
+        const steps = 60;
+        const stepValue = target / steps;
+        let current = 0;
+        const timer = setInterval(() => {
+          current += stepValue;
+          if (current >= target) {
+            element.textContent = target + suffix;
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(current) + suffix;
+          }
+        }, duration / steps);
+      }
+
+      // ===== 检测元素是否在视口中 =====
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      // ===== 滚动动画触发 =====
+      let statsAnimated = false;
+      window.addEventListener("scroll", () => {
+        if (!statsAnimated) {
+          const statsSection = document.querySelector(".stats-section");
+          if (statsSection && isInViewport(statsSection)) {
+            const statNumbers = document.querySelectorAll(".stat-number");
+            statNumbers.forEach((el) => {
+              const text = el.textContent;
+              const hasPlus = text.includes("+");
+              const hasPercent = text.includes("%");
+              const number = parseInt(text.replace(/[^0-9]/g, ""));
+
+              el.textContent = "0";
+              setTimeout(() => {
+                animateNumber(
+                  el,
+                  number,
+                  hasPlus ? "+" : hasPercent ? "%" : ""
+                );
+              }, 100);
+            });
+            statsAnimated = true;
+          }
+        }
+      });
+
+      // ===== 初始化 =====
+      console.log("源计划职业交易员孵化器 - 加入我们页面已加载");
+    </script>
+  </body>
+</html>

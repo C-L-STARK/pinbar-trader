@@ -11,7 +11,7 @@ export default function Pricing() {
   return (
     <div className="w-full p-1" id="pricing">
       <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-10 mb-10 relative z-20 py-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-        立即加入 CRYPTO CASH CONTROL <br /> 获得 <Cover>稳定收益</Cover>
+        立即加入源计划 <br /> 获得 <Cover>专业成长</Cover>
       </h1>
       <div className="pl-15 pr-15">
         <div className="flex flex-col md:flex-row items-center w-full gap-2">

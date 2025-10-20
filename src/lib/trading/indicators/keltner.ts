@@ -1,4 +1,4 @@
-import { ATR, EMA } from 'technicalindicators';
+import { calculateATR, calculateEMA } from './pure-indicators';
 import type { Candle, KeltnerChannelResult } from '../types';
 
 export interface KeltnerChannelConfig {
@@ -37,18 +37,10 @@ export function calculateKeltnerChannel(
   const lowPrices = candles.map(c => c.low);
 
   // Calculate EMA (middle line)
-  const emaValues = EMA.calculate({
-    period: maPeriod,
-    values: closePrices,
-  });
+  const emaValues = calculateEMA(closePrices, maPeriod);
 
   // Calculate ATR
-  const atrValues = ATR.calculate({
-    period: atrPeriod,
-    high: highPrices,
-    low: lowPrices,
-    close: closePrices,
-  });
+  const atrValues = calculateATR(highPrices, lowPrices, closePrices, atrPeriod);
 
   // Align arrays (both EMA and ATR will have fewer values than input)
   const startIndex = Math.max(

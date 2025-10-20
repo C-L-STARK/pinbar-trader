@@ -1,4 +1,4 @@
-import { CCI } from 'technicalindicators';
+import { calculateCCI as calculateCCIPure } from './pure-indicators';
 import type { Candle } from '../types';
 
 export interface CCIConfig {
@@ -34,13 +34,8 @@ export function calculateCCI(candles: Candle[], config: CCIConfig): number[] {
   const lowPrices = candles.map(c => c.low);
   const closePrices = candles.map(c => c.close);
 
-  // Calculate CCI using technicalindicators library
-  const cciValues = CCI.calculate({
-    period: period,
-    high: highPrices,
-    low: lowPrices,
-    close: closePrices,
-  });
+  // Calculate CCI using pure TypeScript implementation
+  const cciValues = calculateCCIPure(highPrices, lowPrices, closePrices, period);
 
   return cciValues;
 }
