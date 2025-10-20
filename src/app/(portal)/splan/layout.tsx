@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import SplanFooter from "@/components/splan/SplanFooter";
 
 export const metadata: Metadata = {
   title: "源计划职业交易员孵化器",
@@ -11,10 +10,5 @@ export default function SplanLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <>
-      {children}
-      <SplanFooter />
-    </>
-  );
+  return <>{children}</>;
 }

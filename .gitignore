@@ -42,7 +42,6 @@ next-env.d.ts
 
 # temporary and development files
 fastq/
-splan/
 scripts/
 *_SUMMARY.md
 *_GUIDE.md
