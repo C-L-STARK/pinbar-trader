@@ -23,6 +23,10 @@ const navItems = [
     link: "/dashboard",
   },
   {
+    name: "常见问题",
+    link: "/splan/faq",
+  },
+  {
     name: "捐赠",
     link: "/splan/donate",
   },
