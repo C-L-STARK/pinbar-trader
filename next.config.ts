@@ -28,9 +28,8 @@ const nextConfig: NextConfig = {
 
     return config;
   },
-  // Transpile these packages to ensure compatibility
-  transpilePackages: ['technicalindicators', 'binance-api-node'],
-  // Ensure server components can use these packages
+  // Use serverComponentsExternalPackages instead of transpilePackages
+  // These packages should be bundled externally and not transpiled
   experimental: {
     serverComponentsExternalPackages: ['technicalindicators', 'binance-api-node', 'uuid'],
   },
