@@ -26,7 +26,7 @@ const DummyContent = () => {
                 源计划职业交易员孵化
               </h1>
               <p className="text-2xl md:text-3xl text-center text-gray-700 dark:text-gray-200 mb-6 font-semibold">
-                魔界之门是窄门,我们的理念是留下极少数,劝返大多数
+                时间是优秀交易员的朋友,耐心与纪律铸就长期成功
               </p>
               <p className="text-base md:text-lg text-center text-gray-400 max-w-3xl mb-12 leading-relaxed">
                 我们致力于用最短的时间从大量人群中筛选出少数适合做交易的人才并进行培养并给予支持
