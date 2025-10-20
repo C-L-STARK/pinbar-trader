@@ -26,12 +26,12 @@ const nextConfig: NextConfig = {
     // Ensure proper module resolution
     config.resolve.extensions = ['.ts', '.tsx', '.js', '.jsx', '.json'];
 
+    // Don't externalize these packages - let webpack bundle them
+    config.resolve.alias = {
+      ...config.resolve.alias,
+    };
+
     return config;
-  },
-  // Use serverComponentsExternalPackages instead of transpilePackages
-  // These packages should be bundled externally and not transpiled
-  experimental: {
-    serverComponentsExternalPackages: ['technicalindicators', 'binance-api-node', 'uuid'],
   },
 };
 
