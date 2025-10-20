@@ -34,7 +34,7 @@ export default function DonatePage() {
             transition={{ delay: 0.2 }}
             className="text-xl text-purple-100 max-w-2xl mx-auto"
           >
-            自2025年3月10日起全球范围接受捐赠成为90天试用会员
+            自2025年10月1日起全球范围接受捐赠成为90天试用会员
           </motion.p>
         </div>
       </div>
