@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
       }
     ]
   },
+  // Disable barrel file optimization for problematic packages
+  experimental: {
+    optimizePackageImports: ['recharts'],
+  },
   // Configure webpack to properly handle third-party packages
   webpack: (config, { isServer }) => {
     // Add fallback for modules that might not be available in browser
