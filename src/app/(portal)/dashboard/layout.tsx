@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Theme } from "@radix-ui/themes";
-import { Inter } from "next/font/google";
-
-import "@/app/globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
-  title: "CryptoCashControl App",
-  description: "This is CryptoCashControl Official WebSite. Our X: @CryptoCashCtrl.",
+  title: "源计划 - 交易控制台",
+  description: "源计划量化交易控制台 - 实时监控、回测分析和策略管理。",
 };
 
 export default function RootLayout({
@@ -20,13 +10,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" className={inter.variable}>
-      <body>
-        <Theme accentColor="iris" scaling="90%" grayColor="olive" appearance="inherit" radius="small">
-          {children}
-        </Theme>
-      </body>
-    </html>
-  );
+  return <>{children}</>;
 }
