@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import UnifiedNavbar from "@/components/layout/UnifiedNavbar";
 import SplanFooter from "@/components/splan/SplanFooter";
+import SubscriptionNotification from "@/components/custom/SubscriptionNotification";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function PortalLayout({
           </Theme>
         </main>
         <SplanFooter />
+        <SubscriptionNotification />
       </body>
     </html>
   );
